@@ -1,0 +1,339 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+
+body {
+    background-color: #c9d6ff;
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    background-color: orangered;
+    color: #fff;
+    height: 220px;
+    padding-top: 40px;
+    padding-left: 50px;
+
+}
+
+nav h1 {
+    font-size: 50px;
+    color: blue;
+}
+
+
+nav::before,
+nav::after {
+    content: '';
+    position: absolute;
+    height: 100px;
+    top: 190px;
+    right: 0;
+    left: 0;
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    ;
+    transform: skewY(-3deg);
+    -webkit-transform: skewY(-3deg);
+    -moz-transform: skewY(-3deg);
+    -ms-transform: skewY(-3deg);
+}
+
+nav .navbar {
+    display: flex;
+    position: relative;
+}
+
+.container {
+    background: #fff;
+    width: 450px;
+    padding: 1.5rem;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 20px 35px rgba(0, 0, 1, 0.9);
+    position: relative;
+    top: 30px;
+    animation: slideInFromBottom 1s ease-in;
+}
+
+/* Animations */
+@keyframes slideInFromBottom {
+    0% {
+        transform: translatey(100%);
+    }
+
+    100% {
+        transform: translatex(0);
+    }
+}
+
+.container #sign-on-header {
+    font-size: 45px;
+}
+
+.container .first {
+    color: #8b8b8b;
+    position: relative;
+    top: 5px;
+}
+
+form {
+    margin: 0.2rem;
+    justify-content: space-between;
+}
+
+p {
+    font-size: 25px;
+    position: relative;
+    top: 20px;
+}
+
+input {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100px;
+    width: 400px;
+    padding-left: 10px;
+    font-size: 20px;
+    border: none;
+    border-bottom: 3px solid black;
+    position: relative;
+    top: 50px;
+}
+
+
+.container span {
+    font-size: 25px;
+    font-weight: bolder;
+    position: relative;
+    top: 150px;
+    color: #f80000;
+}
+
+.btn {
+    font-size: 1.1rem;
+    padding: 8px 0;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    width: 100%;
+    background: rgb(125, 125, 235);
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    top: 65px;
+}
+
+.btn:hover {
+    background: #07001f;
+}
+
+#signOn {
+    background-color: transparent;
+    border-radius: unset;
+    box-shadow: none;
+    justify-content: space-between;
+    text-align: center;
+    animation: shrink;
+    animation-duration: 2s;
+}
+
+/* Animations */
+@keyframes shrink {
+    50% {
+        transform: scale(0.5, 0.5);
+    }
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    background-color: orangered;
+    color: #fff;
+    height: 220px;
+
+    padding-top: 40px;
+    padding-left: 50px;
+
+}
+
+#signOn i {
+    font-size: 350px;
+    color: green;
+}
+
+#signOn h2 {
+    font-size: 30px;
+    position: relative;
+    top: 20px;
+
+}
+
+#signOn p {
+    font-size: 20px;
+    font-weight: bolder;
+    position: relative;
+    top: 30px;
+}
+
+#signOn a {
+    font-size: 25px;
+    font-weight: bolder;
+    position: relative;
+    top: 45px;
+    color: transparent;
+    background-image: linear-gradient(to right, #f00, #ff0, #0ff, #0f0, #00f);
+    background-clip: text;
+    animation: animate 20s linear infinite;
+    background-size: 1000%;
+    text-decoration: none;
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0% 100%;
+    }
+
+    50% {
+        background-position: 100% 0%;
+    }
+
+    100% {
+        background-position: 0% 100%;
+    }
+}
+
+#signOn a:hover {
+    border-bottom: 3px solid #000;
+}
+
+span {
+    font-size: 25px;
+    font-weight: bolder;
+    position: relative;
+    top: 75px;
+    color: #f80000;
+}
+
+/* phone */
+@media(max-width:500px) {
+    * {
+        padding-bottom: 40px;
+    }
+
+    body {
+        overflow-y: scroll;
+        height: 100%;
+
+
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        background-color: orangered;
+        color: #fff;
+        height: 220px;
+        padding-top: 40px;
+        padding-left: 50px;
+
+    }
+
+
+    nav h1 {
+        font-size: 25px;
+    }
+
+    .container {
+        width: 300px;
+        height: 600px;
+    }
+
+    .container .first {
+        font-size: 25px;
+    }
+
+    .container #sign-on-header {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 20px;
+        position: relative;
+        top: 15px;
+    }
+
+    input {
+        height: 90px;
+        width: 250px;
+    }
+
+    .container .ss {
+        display: flex;
+        padding-left: 20px;
+    }
+
+    .container .ss span {
+        font-size: 15px;
+        position: relative;
+
+    }
+
+    #signOn i {
+        font-size: 150px;
+    }
+
+    #signOn h2 {
+        font-size: 15px;
+    }
+
+    #signOn p {
+        font-size: 15px;
+    }
+
+    #signOn a {
+        font-size: 20px;
+        font-weight: bold;
+        color: transparent;
+        background-image: linear-gradient(to right, #f00, #ff0, #000, #0ff, #0f0, #00f);
+        background-clip: text;
+        animation: animate 20s linear infinite;
+        background-size: 1000%;
+    }
+
+    @keyframes animate {
+        0% {
+            background-position: 0% 100%;
+        }
+
+        50% {
+            background-position: 100% 0%;
+        }
+
+        100% {
+            background-position: 0% 100%;
+        }
+    }
+
+    #signOn .ss {
+        display: flex;
+        padding-left: 20px;
+    }
+
+    #signOn .ss span {
+        font-size: 15px;
+        position: relative;
+
+    }
+
+
+    .btn {
+        width: 250px;
+        height: 60px;
+    }
+}
